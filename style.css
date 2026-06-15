@@ -1,0 +1,41 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #18181c 0%, #010102 60%, #000 100%);
+}
+
+graph {
+  position: relative;
+  width: 70vmin;
+  height: 70vmin;
+  overflow: hidden;
+}
+
+@property --color-2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #fed790;
+}
+
+#wrapper {
+  animation: turn 24s step-end infinite;
+}
+
+@keyframes turn {
+  0% {
+    transform: scale(1.8) rotate(15deg);
+    --color-2: #fed790;
+  }
+  50% {
+    transform: scale(1.8) rotate(-15deg);
+    --color-2: #00bb9c;
+  }
+}
